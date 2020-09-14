@@ -1,0 +1,54 @@
+.frontpage-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 1fr;
+      grid-template-columns: 15% 1fr;
+  gap: 1em;
+}
+
+.frontpage-container .fontpage-mainContent figure {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30%;
+      grid-template-columns: 1fr 30%;
+}
+
+.frontpage-container .fontpage-mainContent figure img {
+  width: 100%;
+}
+
+.frontpage-container .fontpage-mainContent figure figcaption {
+  background-color: #2C3737;
+  padding: 1em;
+}
+
+.frontpage-container .fontpage-mainContent figure figcaption h2 {
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.frontpage-container .fontpage-mainContent figure figcaption h2 span {
+  font-weight: bold;
+}
+
+.frontpage-container .fontpage-mainContent figure figcaption p {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.frontpage-container .fontpage-mainContent figure figcaption div {
+  margin: 1em 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.29);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+  font-size: 2.4em;
+  line-height: 1.4em;
+}
+
+.frontpage-container .fontpage-mainContent figure figcaption a {
+  text-decoration: none;
+  color: var(--border-color);
+  background-color: var(--highlight);
+  padding: .5em 2em;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=frontpage.component.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,qBAAqB,CAAC;EAClB,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,iBAAiB;EAChC,OAAO,EAAE,KAAK;CAejB;;AAlBD,AAII,qBAJiB,CAIjB,CAAC,CAAC;EACE,KAAK,EAAE,gBAAgB;EACvB,eAAe,EAAE,IAAI;CACxB;;AAPL,AAQI,qBARiB,CAQjB,IAAI,CAAC;EACD,KAAK,EAAE,gBAAgB;CAC1B;;AAVL,AAWI,qBAXiB,CAWjB,WAAW,CAAC;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM;CACjB;;AAdL,AAeI,qBAfiB,CAejB,0BAA0B,CAAC;EAC3B,OAAO,EAAE,IAAI;CACZ",
+    "sources": [
+        "breadcrumb.component.scss"
+    ],
+    "names": [],
+    "file": "breadcrumb.component.css"
+}
