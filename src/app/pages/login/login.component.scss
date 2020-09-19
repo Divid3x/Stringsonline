@@ -1,0 +1,53 @@
+.login {
+    .login-form {
+        label {
+            display: block;
+            margin: 1em 0 .5em 0;
+        }
+        input {
+            display: block;
+            padding: 0.5em;
+            width: 250px;
+            background-color: var(--input-fill);
+            border: 1px solid var(--border-color);
+            color: var(--highlight);
+            &::placeholder {
+                color: var(--highlight);
+                opacity: .5;
+            }
+
+        }
+        button {
+            margin-top: 1em;
+            padding: .5em 2em;
+            background-color: var(--highlight);
+            border: none;
+            color: var(--dark-font);
+            cursor: pointer;
+            &:disabled {
+                opacity: .5;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.danger {
+    display: block;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: rgb(255, 107, 107);
+    animation: danger 200ms ease-in-out forwards;
+}
+
+@keyframes danger{
+    from {
+        opacity: 0;
+        transform: translateY(-1em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}

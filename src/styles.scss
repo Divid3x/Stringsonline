@@ -5,8 +5,33 @@
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
 }
+* {
+    &::-webkit-scrollbar {
+        width: 8px;        
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: var(--input-fill);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 2px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        background: var(--highlight);
+
+
+    }
+}
 body {
     background-color: #131313;
+    overflow-x: hidden;
 }
 
 h1, 
@@ -20,17 +45,44 @@ a,
 span, 
 button, 
 details, 
-summary {
+summary,
+label {
     color: white;
 }
-p {
-    font-size: .8em;
+button {
+    cursor: pointer;
 }
-
+a {
+    cursor: pointer;
+}
+p {
+    font-size: 1em;
+}
+label {
+    user-select: none;
+}
 
 .page-header, .page-main {
     width: 80%;
     margin: 0 auto 1em auto;
+
+}
+.page-main {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    gap: 1em;
+    min-height: 59.5vh;
+    @media (max-width: 1800px) {
+        grid-template-columns: 20% 1fr;
+
+    }
+    @media (max-width: 1400px) {
+        grid-template-columns: 30% 1fr;
+
+    }
+    @media (max-width: 900px) {
+        display: block;
+    }
 }
 // page colors as variables
 :root {

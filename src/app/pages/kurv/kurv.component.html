@@ -1,0 +1,26 @@
+<header class="page-header">
+    <app-nav></app-nav>
+    <breadcrumb [breadcrumbs]="[{place: 'Indkøbskurv', url: '/Indkøbskurv'}]"></breadcrumb>
+</header>
+<main class="page-main">
+    <app-side-menu></app-side-menu>
+    <section class="cart-container">
+        <section class="cart-items">
+            <h2 *ngIf="!itemsInCart">Der er ikke nogen vare i din kurv.</h2>
+            <cart-card class="cartCard" *ngFor="let item of product" [image]="item.image" [title]="item.name"
+                [quantity]="item.quantity" [price]="item.price" [stock]="item.stock" [id]="item.id" [pid]="item.pid">
+            </cart-card>
+        </section>
+        <section class="action-cart">
+            <div class="action-cart-container">
+                <h3 class="amount-cart">BELØB</h3>
+                <div>
+                    <h3 class="cart-price">DKK {{totalPrice}}</h3>
+                    <p class="moms-cart">Prisen er inkl. moms</p>
+                </div>
+                <button (click)="clearCart()">RYD</button>
+            </div>
+            <a class="buy" href="/kasse">Til kassen</a>
+        </section>
+    </section>
+</main>

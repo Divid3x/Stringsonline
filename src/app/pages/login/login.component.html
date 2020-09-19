@@ -1,0 +1,21 @@
+<header class="page-header">
+    <app-nav></app-nav>
+    <breadcrumb [breadcrumbs]="[{place: 'login', url: 'login'}]"></breadcrumb>
+</header>
+<main class="page-main">
+    <app-side-menu></app-side-menu>
+    <section class="login">
+        <h1>Login</h1>
+        <p>Indtast brugernavn og adgangskode for at logge på</p>
+        <form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="login">
+            <label for="username">Brugernavn:</label>
+            <input formControlName="username" type="text" id="username" placeholder="John@doe.com">
+            <p class="danger" *ngIf="!f.username.valid && f.username.touched">Du skal skrive et brugernavn.</p>
+            <label for="password">adgangskode:</label>
+            <input formControlName="password" type="password" id="password" placeholder="*******">
+            <p class="danger" *ngIf="!f.password.valid && f.password.touched">Du skal skrive en adgangskode.</p>
+            <p class="danger" *ngIf="!couldLogin">Brugernavn eller Adgangskode er forkert.</p>
+            <button [disabled]="!login.valid">Login</button>
+        </form>
+    </section>
+</main>
